@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root{
+    --button-buka-v2: #F5519E;
+    --bg-body-v2: #ed9fc3;
+
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Menghapus scrollbar di browser berbasis Webkit */
+}
+
+.italianno-regular {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nunito {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+#undangan-v2-cover{
+    background-image: url('../../../asset/img/undangan-v2/cover-long.png');
+}
+
+#undangan-v2-content{
+    background-image: url('../../../asset/img/undangan-v2/9564990caac9ef75dc87403d766fbe63.jpeg');
+    background-size: cover;
+}
+
+
+
+.color-bg{
+    background-color: var(--bg-body-v2);
+}
+.color-buka{
+    background-color: var(--button-buka-v2);
+}   

@@ -1,0 +1,13 @@
+body{
+    background-color: #0F253B;
+}
+
+.home-wedding a{
+    border: 1px solid white;
+    font-size: 12px;
+}
+
+.home-wedding a:hover{
+    background-color: #B17500;
+    color: white;
+}
