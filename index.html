@@ -1,49 +1,297 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aqiqah</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/asset/css/undangan-v3/main.css">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
+    <!-- CSS utama (pertahankan agar desain tidak berubah) -->
+    <link rel="stylesheet" href="/asset/css/undangan-v3/main.css" />
+
+    <!-- Font Awesome & AOS -->
     <script src="https://kit.fontawesome.com/0a267e6f70.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
 
-    <div class="row col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mx-auto">
+    <!-- Musik latar: diputar via gesture klik -->
+    <audio id="bgm" hidden loop playsinline preload="auto">
+      <source src="/asset/audio/lagu.mp3" type="audio/mp3" />
+    </audio>
+
+    <!-- =================== COVER / HALAMAN PEMBUKA =================== -->
+    <section id="cover" class="row col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mx-auto">
       <div class="cover align-items-center justify-content-center d-flex flex-column">
-        <img src="/asset/img/undangan-v3/item-1.png" class="item-image-1" alt="">
-        <img src="/asset/img/undangan-v3/item-2.png" class="item-image-2" alt="">
-        <img src="/asset/img/undangan-v3/item-3.png" class="item-image-3" alt="">
-        <img src="/asset/img/undangan-v3/item-4.png" class="item-image-4" alt="">
-        <img src="/asset/img/undangan-v3/item-5.png" class="item-image-5" alt="">
+        <img src="/asset/img/undangan-v3/item-1.png" class="item-image-1" alt="" />
+        <img src="/asset/img/undangan-v3/item-2.png" class="item-image-2" alt="" />
+        <img src="/asset/img/undangan-v3/item-3.png" class="item-image-3" alt="" />
+        <img src="/asset/img/undangan-v3/item-4.png" class="item-image-4" alt="" />
+        <img src="/asset/img/undangan-v3/item-5.png" class="item-image-5" alt="" />
 
         <div class="cover-content-title text-center p-2 mb-2">
-            <h3 data-aos="zoom-in-up" data-aos-duration="3000">Undangan <br> Aqiqah</h3>
+          <h3 data-aos="zoom-in-up" data-aos-duration="3000">Undangan <br /> Aqiqah</h3>
         </div>
+
         <div class="cover-content text-center p-1" data-aos="zoom-in-up" data-aos-duration="3000">
-            <h3>Fauqiyah Azzahra</h3>
-            <h3>&</h3>
-            <h3>Fauziyah Azzahra</h3> <br>
-
-            <p>Kepada Yth; <br> Bapak/Ibu/Saudara/i</p> <br>
-
-            <a href="content/index.html" class="btn"><i class="fa-regular fa-envelope-open"></i> Buka Undangan</a>
+          <h3>Fauqiyah Azzahra</h3>
+          <h3>&</h3>
+          <h3>Fauziyah Azzahra</h3>
+          <br />
+          <p>Kepada Yth; <br /> Bapak/Ibu/Saudara/i</p>
+          <br />
+          <a href="#undangan" class="btn" id="openInvite">
+            <i class="fa-regular fa-envelope-open"></i> Buka Undangan
+          </a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- =================== BAGIAN TENTANG / SAPAAN =================== -->
+    <section id="undangan" class="row col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mx-auto">
+      <div class="cover align-items-center justify-content-center d-flex">
+        <img data-aos="fade-down-right" data-aos-duration="2000" src="/asset/img/undangan-v3/item-1.png" class="item-image-1" alt="" />
+        <img data-aos="fade-down-left" data-aos-duration="2000" src="/asset/img/undangan-v3/item-2.png" class="item-image-2" alt="" />
+        <img src="/asset/img/undangan-v3/item-3.png" class="item-image-3" alt="" />
+        <img src="/asset/img/undangan-v3/item-4.png" class="item-image-4" alt="" />
+        <img src="/asset/img/undangan-v3/item-7.png" class="item-image-6" alt="" />
+        <img src="/asset/img/undangan-v3/item-7.png" class="item-image-7" alt="" />
 
-    <script src="/asset/js/undangan-v3/script.js"></script>
+        <div class="tentang-content text-center p-2" data-aos="zoom-in-up" data-aos-duration="3000">
+          <h3 class="mb-4">Assalamualaikum Wr. Wb.</h3>
+          <p>Tanpa mengurangi rasa hormat kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara Aqiqah anak kami:</p>
 
+          <h4>Fauqiyah Azzahra</h4>
+          <h4>&</h4>
+          <h4>Fauziyah Azzahra</h4>
+
+          <p>Anak dari Bapak Taufik Ibrahim dan Ibu Nugrah Ramadana</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== BAGIAN ACARA / COUNTDOWN =================== -->
+    <section class="row col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mx-auto">
+      <div class="cover align-items-center justify-content-center d-flex">
+        <img data-aos="fade-down-right" data-aos-duration="2000" src="/asset/img/undangan-v3/item-1.png" class="item-image-1" alt="" />
+        <img data-aos="fade-down-left" data-aos-duration="2000" src="/asset/img/undangan-v3/item-2.png" class="item-image-2" alt="" />
+        <img data-aos="fade-up-right" data-aos-duration="2000" src="/asset/img/undangan-v3/item-3.png" class="item-image-3" alt="" />
+        <img data-aos="fade-up-left" data-aos-duration="2000" src="/asset/img/undangan-v3/item-4.png" class="item-image-4" alt="" />
+        <img src="/asset/img/undangan-v3/item-7.png" class="item-image-6" alt="" />
+        <img src="/asset/img/undangan-v3/item-7.png" class="item-image-7" alt="" />
+
+        <div class="acara-content text-center p-2">
+          <h3 data-aos="zoom-in-up" data-aos-duration="3000" class="mb-4">Acara Aqiqah</h3>
+          <p data-aos="zoom-in-up" data-aos-duration="3000" class="fw-bold">Insya Allah akan dilaksanakan pada:</p>
+
+          <div class="countdown">
+            <span class="time-box" data-aos="zoom-out-right" data-aos-duration="3000">
+              <span class="time" id="days">0</span>
+              <span class="label">Hari</span>
+            </span>
+            <span class="time-box" data-aos="zoom-in-down" data-aos-duration="3000">
+              <span class="time" id="hours">0</span>
+              <span class="label">Jam</span>
+            </span>
+            <span class="time-box" data-aos="zoom-in-down" data-aos-duration="3000">
+              <span class="time" id="minutes">0</span>
+              <span class="label">Menit</span>
+            </span>
+            <span class="time-box" data-aos="zoom-out-left" data-aos-duration="3000">
+              <span class="time" id="seconds">0</span>
+              <span class="label">Detik</span>
+            </span>
+          </div>
+
+          <h4 data-aos="zoom-in-up" data-aos-duration="3000">Minggu, 17 Agustus 2025</h4>
+          <p data-aos="zoom-in-up" data-aos-duration="3000">Pukul : 10:00 WITA s/d Selesai</p>
+          <p data-aos="zoom-in-up" data-aos-duration="3000">
+            Jalan Poros Palopo, Anabanua <br />
+            (Samping Masjid Raudhatul Al Hazanah)
+          </p>
+
+          <iframe
+            data-aos="zoom-in-up"
+            data-aos-duration="3000"
+            class="mb-3"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3980.351901267152!2d120.07051717497502!3d-3.9476608960260946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwNTYnNTEuNiJTIDEyMMKwMDQnMjMuMSJF!5e0!3m2!1sid!2sid!4v1754805905806!5m2!1sid!2sid"
+            width="80%"
+            height="auto"
+            style="border-radius: 15px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+          <a
+            data-aos="zoom-in-up"
+            data-aos-duration="3000"
+            href="https://maps.app.goo.gl/5zXNYM5kGTT4X5Em6?g_st=ipc"
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa-solid fa-location-dot"></i> Lihat lokasi</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== BAGIAN TANDA KASIH =================== -->
+    <section class="row col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mx-auto">
+      <div class="cover align-items-center justify-content-center d-flex">
+        <img data-aos="fade-down-right" data-aos-duration="2000" src="/asset/img/undangan-v3/item-1.png" class="item-image-1" alt="" />
+        <img data-aos="fade-down-left" data-aos-duration="2000" src="/asset/img/undangan-v3/item-2.png" class="item-image-2" alt="" />
+        <img data-aos="fade-up-right" data-aos-duration="2000" src="/asset/img/undangan-v3/item-3.png" class="item-image-3" alt="" />
+        <img data-aos="fade-up-left" data-aos-duration="2000" src="/asset/img/undangan-v3/item-4.png" class="item-image-4" alt="" />
+        <img src="/asset/img/undangan-v3/item-7.png" class="item-image-6" alt="" />
+        <img src="/asset/img/undangan-v3/item-7.png" class="item-image-7" alt="" />
+
+        <div class="tanda-content text-center p-2" data-aos="zoom-in-up" data-aos-duration="3000">
+          <h3 class="mb-4" data-aos="zoom-in-up" data-aos-duration="3000">Tanda Kasih</h3>
+          <p data-aos="zoom-in-up" data-aos-duration="3000">
+            Dengan penuh rasa syukur ke hadirat Allah SWT, kami mengucapkan terima kasih yang sebesar-besarnya atas doa dan dukungan Bapak/Ibu/Saudara/i sehingga acara aqiqah putra/putri kami menjadi semakin istimewa dan bermakna. Semoga setiap kebaikan yang diberikan mendapat balasan limpahan rahmat, berkah, dan kebahagiaan dari Allah SWT.
+          </p>
+          <p data-aos="zoom-in-up" data-aos-duration="3000">
+            Merupakan suatu kehormatan sekaligus kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan meluangkan waktu untuk hadir, sekaligus memberikan doa restu bagi putra/putri kami, agar kelak menjadi anak yang shalih/shalihah, berbakti kepada orang tua, dan bermanfaat bagi agama, nusa, dan bangsa.
+          </p>
+
+          <p><i>Hormat Kami Yang Mengundang</i></p>
+          <p class="fw-bold">Bapak Taufik Ibrahim dan Ibu Nugrah Ramadana</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Script utama: AOS, smooth scroll, play audio on click, tombol suara, countdown -->
     <script>
+      // Inisialisasi AOS
       AOS.init();
+
+      // Smooth scroll untuk anchor internal
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      // Dapatkan elemen audio dan tombol "Buka Undangan"
+      const bgm = document.getElementById("bgm");
+      const btnOpen = document.getElementById("openInvite");
+
+      // Coba pre-play dalam keadaan mute agar beberapa browser mengizinkan
+      bgm.muted = true;
+      bgm.play().finally(() => {
+        // akan di-unmute pada gesture klik
+        bgm.pause();
+        bgm.currentTime = 0;
+        bgm.muted = false;
+      });
+
+      // Putar musik saat tombol diklik (user gesture)
+      btnOpen.addEventListener("click", function () {
+        if (bgm && bgm.paused) {
+          const p = bgm.play();
+          if (p && typeof p.then === "function") {
+            p.catch(() => showToast("Ketuk ikon suara jika musik belum menyala."));
+          }
+        }
+      });
+
+      // Tombol mute/unmute mengambang
+      const soundBtn = document.createElement("button");
+      soundBtn.className = "btn btn-light position-fixed";
+      soundBtn.style.right = "16px";
+      soundBtn.style.bottom = "16px";
+      soundBtn.style.borderRadius = "999px";
+      soundBtn.style.boxShadow = "0 6px 16px rgba(0,0,0,.15)";
+      soundBtn.style.zIndex = "10000";
+      soundBtn.setAttribute("aria-label", "Toggle suara");
+      soundBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+      document.body.appendChild(soundBtn);
+
+      soundBtn.addEventListener("click", () => {
+        if (bgm.paused) {
+          bgm.play()
+            .then(() => (soundBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>'))
+            .catch(() => showToast("Browser memblokir autoplay. Coba ketuk lagi."));
+        } else {
+          bgm.pause();
+          soundBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+        }
+      });
+
+      // Notifikasi kecil
+      function showToast(text) {
+        let toast = document.getElementById("miniToast");
+        if (!toast) {
+          toast = document.createElement("div");
+          toast.id = "miniToast";
+          toast.style.position = "fixed";
+          toast.style.left = "50%";
+          toast.style.bottom = "90px";
+          toast.style.transform = "translateX(-50%)";
+          toast.style.padding = "10px 14px";
+          toast.style.background = "rgba(0,0,0,.75)";
+          toast.style.color = "#fff";
+          toast.style.borderRadius = "10px";
+          toast.style.fontSize = "14px";
+          toast.style.zIndex = "10001";
+          toast.style.transition = "opacity .3s";
+          document.body.appendChild(toast);
+        }
+        toast.textContent = text;
+        toast.style.opacity = "1";
+        setTimeout(() => (toast.style.opacity = "0"), 2200);
+      }
+
+      // ===== Countdown ke 17 Agustus 2025 10:00 (waktu lokal perangkat) =====
+      const targetDate = new Date("2025-08-17T10:00:00"); // lokal user
+      const countdownFunction = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = targetDate.getTime() - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const d = document;
+        const elDays = d.getElementById("days");
+        const elHours = d.getElementById("hours");
+        const elMinutes = d.getElementById("minutes");
+        const elSeconds = d.getElementById("seconds");
+
+        if (elDays)   elDays.textContent = Math.max(0, days);
+        if (elHours)  elHours.textContent = Math.max(0, hours);
+        if (elMinutes)elMinutes.textContent = Math.max(0, minutes);
+        if (elSeconds)elSeconds.textContent = Math.max(0, seconds);
+
+        if (distance < 0) {
+          clearInterval(countdownFunction);
+          const box = document.querySelector(".countdown");
+          if (box) box.innerHTML = "Waktu telah habis!";
+        }
+      }, 1000);
     </script>
   </body>
 </html>
